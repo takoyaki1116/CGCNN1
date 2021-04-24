@@ -121,7 +121,7 @@ def validate(args, val_loader, model, criterion, normalizer, test=False, trans=F
     if test:
         # graph
         x = graph_output.numpy()
-        t = target.numpy()
+        t = graph_target.numpy()
         n_max = max(np.max(x), np.max(t))
         n_min = min(np.min(x), np.min(t))
         a = np.linspace(n_min - abs(n_max), n_max + abs(n_max))
